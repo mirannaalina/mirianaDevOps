@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+read=$1
+if [[ "${read}" =~ [0-9]]]; then
+        echo 'numeric'
+ else
+        curl https://wttr.in/"${read}"
+fi
